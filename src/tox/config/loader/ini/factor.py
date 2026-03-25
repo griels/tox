@@ -20,9 +20,6 @@ def filter_for_env(value: str, name: str | None) -> str:
         set(chain.from_iterable([(i for i, _ in a) for a in find_factor_groups(name)])) if name is not None else set()
     )
     current.add(sys.platform)
-    parts = sysconfig.get_platform().rsplit("-", 1)
-    if len(parts) > 1:
-        current.add(parts[-1])
     overall: list[str] = []
     active_continuation = False
     pending_skip = False
