@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import re
 import sys
-import sysconfig
 from itertools import chain, groupby, product
 from typing import TYPE_CHECKING
 
